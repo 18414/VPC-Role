@@ -1,0 +1,18 @@
+---
+- name: vpc peering in local account
+  ec2_vpc_peer:
+    region: "{{ nvg_region }}" 
+    vpc_id: vpc-0fd1924efcc4bf44d 
+    peer_vpc_id: "{{ myvpc.vpc.id }}" 
+    state: present
+    tags:
+      Name: Peering connection for default VPC to new VPC 
+  register: vpc_peer
+
+- name: Accept local VPC peering request
+  ec2_vpc_peer:
+    region: "{{ nvg_region }}"
+    peering_id: "{{ vpc_peer.peering_id }}"
+    state: accept
+  register: action_peer
+

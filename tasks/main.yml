@@ -43,6 +43,7 @@
             gateway_id: "{{ igw.gateway_id }}"
         tags: 
           Name: "{{ my_router }}" 
+      register: rt
         
 
     - name: Create Security Group
@@ -61,6 +62,9 @@
             - 22
             cidr_ip: 0.0.0.0/0
       register: security_group
+
+    - name: Create VPC peering
+      include_tasks: vpc_peering.yml
      
     
     - name: Launch the new ec2 instance
