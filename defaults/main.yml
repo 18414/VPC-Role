@@ -2,7 +2,7 @@
 nvg_region: "us-east-1"
 ohio_region: "us-east-2"
 vpc_name: "vpc-ganesha"
-subnet_name: "sunet-hanesha"
+subnet_name: "subnet-ghanesha"
 sg_name: "my-sg"
 my_router: "router-ganesha"
 key_name: "final_northvg"
