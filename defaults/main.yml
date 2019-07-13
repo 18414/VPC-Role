@@ -1,0 +1,11 @@
+---
+nvg_region: "us-east-1"
+ohio_region: "us-east-2"
+vpc_name: "vpc-ganesha"
+subnet_name: "sunet-hanesha"
+sg_name: "my-sg"
+my_router: "router-ganesha"
+key_name: "final_northvg"
+s_tag: "ElastickSearch-cluster"
+centos7_img: "ami-0b898040803850657"
+my_igw: "my-igw"
